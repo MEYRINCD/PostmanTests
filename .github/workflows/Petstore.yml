@@ -1,5 +1,8 @@
 name: Petstore-build
 on:
+ fork:
+   branches:
+    -master
  push:
   branches:
    -master
