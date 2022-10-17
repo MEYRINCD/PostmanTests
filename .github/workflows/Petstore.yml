@@ -24,10 +24,10 @@ jobs:
       - name: Run Postman collection
         continue-on-error: true
         run: 
-         newman run petstore.collection.json -r cli htmlextra --reporter-htmlextra-export ./testResults/index.html
+         npx newman run petstore.collection.json -r cli,htmlextra --reporter-htmlextra-export ./testResults/index.html
       - name: Uploading Artifacts
         uses: actions/upload-artifact@v1
         if: always()
         with:
-         name: RunReports
+         name: testResults
          path: ./testResults   
