@@ -25,7 +25,7 @@ jobs:
         run: 
          newman run petstore.collection.json -r cli htmlextra --reporter-htmlextra-export ./testResults/index.html
       - name: Uploading Artifacts
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v1
         with:
          name: RunReports
          path: ./testResults
