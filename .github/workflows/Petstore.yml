@@ -1,11 +1,6 @@
 name: Petstore-build
 on:
- fork:
-   branches:
-    -master
- push:
-  branches:
-   -master
+ workflow_dispatch
 jobs:
  test-api:
   runs-on: ubuntu-latest
